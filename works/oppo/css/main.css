@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+/*commonstyle*/
+.commonwidth{width:1180px;margin:0 auto;}
+.fl{float:left;}
+.fr{float:right;}
+body{font-family:'Microsoft Yahei';}
+
+/*header*/
+/*topnav*/
+.topnav{width:100%;height:27px; background:#2b2b2b; border-top:3px solid #009460;padding-top:10px;}
+.sinaus{width:21px;height:17px; background:url(../img/icons.png) no-repeat 0 -881px; display:inline-block;}
+.qqus{width:18px;height:20px; background:url(../img/icons.png) no-repeat 0 -909px; display:inline-block; margin-left:12px; margin-right:19px;}
+.phoneusbox{margin-top:3px;}
+.phoneus{font-size:14px; font-weight:bold; color:#00925f;}
+.phoneus:hover{color:#b2b2b2;}
+.topnav_r li{height:15px; padding:3px 15px 0 15px;border-right:1px solid #474747;}
+.topnav_r a{font-size:12px; color:#b2b2b2;}
+.topnav_r .shoppingcart{padding-right:42px;}
+.shoppingcart_icon{width:19px;height:16px; background:url(../img/icons.png) no-repeat 0 -1013px; margin-right:8px;display:inline-block;}
+.topnav_r a:hover{color:#00925f;}
+
+/*logobox*/
+.logobox{height:85px;}
+.oppologo a{text-indent:-999em; width:170px;height:65px;background:url(../img/20141103155741_RL4uKj.png) no-repeat; display:inline-block;}
+.mainnav li{padding-left:20px;padding-right:20px;}
+.mainnav a{font-size:14px; font-weight:bold; color:#2b2b2b; line-height:85px;}
+.mainnav a:hover{color:#00925f;}
+
+/*content*/
+/*banner*/ 
+.banner{width:100%; height:621px;background:url(../img/20150202100021_PPLCdk.jpg) no-repeat center 0;border-bottom:1px solid #b2b2b2; position:relative;}
+.bann_ad{width:1180px;height:621px; background:url(../img/20150202100021_TgEOkp.png) no-repeat; position:relative; top:-5px;}
+.bann_ad a{width:180px;height:45px; text-indent:-999em;position:absolute; top:306px; left:500px;}
+.ban_opa_t{width:100%; height:3px; opacity:0.4;filter:alpha(opacity:40); background:#fff;}
+.ban_opa_b{width:100%; height:70px; opacity:0.5; filter:alpha(opacity:50); background:#fff; position:absolute;bottom:0;left:0; z-index:1;}
+.page{position:absolute; bottom:28px; left:50%;margin-left:-30px; z-index:2;}
+.page a{width:12px;height:12px; background:url(../img/icons.png) no-repeat -258px -930px;margin-right:13px; display:inline-block;}
+.page .nowpage{width:15px; height:15px; background:url(../img/icons.png) no-repeat -280px -929px;}
+.page a:hover{width:15px; height:15px; background:url(../img/icons.png) no-repeat -280px -929px;}
+
+/*oppoitem*/
+.oppoitem{width:100%; background:#f2f2f2;}
+
+/*oppostar*/
+.oppostar{ height:798px; background:#f2f2f2;}
+.oppostar_con{ width:1180px; margin:0 auto; padding-top:52px; border-top:1px solid #b2b2b2; }
+.oppostar_con h2{ background:url(../img/icons.png) 0 -708px; width:288px; height:80px; margin:0 auto; margin-bottom:42px;}
+.oppostar_con h2 a{ text-indent:-999em; height:100%; display:block;}
+.oppostar_pro li{ float:left; position:relative; border-bottom:5px solid #dfdfdf; margin:0 10px;}
+.shadow{ position:absolute;}
+.oppostar_pro h3{ margin-top:43px; margin-bottom:15px; text-align:center; font-size:20px; font-weight:bold;}
+.oppostar_pro p{ text-align:center; color:#b4b4b4; margin-bottom:15px;}
+.oppostar_pro .a2{ color:#00925f; text-align:center;  display:block; margin-bottom:28px;}
+.oppostar_pro a:hover{color:#666;}
+.oppostar_pro .first{ margin-left:0;}
+.oppostar_pro .last{ margin-right:0; }
+
+
+.oppoacc{ height:1070px; background:#f6f6f6;}
+.oppoacc_con{ width:1180px; margin:0 auto; padding-top:44px;}
+.oppoacc_con h1{ width:386px; height:50px; background:url(../img/oppoacc.png); margin:0 auto; margin-bottom:46px;}
+.oppoacc_con h1 a{ text-indent:-999em; display:block; height:100%; }
+.oppofind7{ background:#fff; width:280px; height:535px; padding-top:40px;text-align:center; border-bottom:5px solid #e1e1e1; margin-right:20px;}
+.oppoacc_pro_l{ width:580px; margin-right:20px;}
+.oppofind7 h2{ margin-bottom:37px;}
+.oppofind7 .msg{ line-height:26px; color:#888888;}
+.oppofind7 h3{ font-size:20px; font-weight:bold;}
+.oppofind7 h3:hover{color:#00925f;}
+.oppofind7 .money{ color:#008d5a; line-height:26px;}
+.oppoguanwang{ width:270px; height:270px; background:#fff; margin-bottom:20px; border:5px solid #eaeaea; text-align:center;}
+.oppoguanwang p{ line-height:58px; font-weight:bold;}
+.oppoguanwang ul{ width:210px; height:150px; border-top:1px solid #e6e6e6; border-bottom:1px solid #e6e6e6; margin:0 30px; padding-left:10px;}
+.oppoguanwang li{ float:left; width:100px; padding-top:23px; }
+.oppoguanwang a{ float:left; margin-top:3px;}
+.oppoguanwang a:hover{color:#00925f;}
+.oppoguanwang i{ width:16px; height:16px; background:url(../img/icons.png) -135px -356px; float:left; margin-right:8px;}
+.oppoguanwang .more{ color:#00925f; line-height:60px; text-align:center; display:block; width:270px;}
+.oppoguanwang .more:hover{text-decoration:underline;}
+.oppodianyuan{ width:265px; height:260px; border-bottom:5px solid #eaeaea; background:#fff; padding-top:10px; padding-left:15px; text-align:center; }
+.oppodianyuan h3{ font-size:17px; font-weight:bold; }
+.oppodianyuan h3:hover{color:#00925f;}
+.oppodianyuan .money{ color:#008d5a; line-height:26px;}
+.oppousb{ width:575px; height:270px; background:#fff; border-bottom:5px solid #eaeaea; margin-top:20px; padding-left:5px;}
+.oppousb .msg{ line-height:26px; color:#888888; margin-top:110px; text-align:center;}
+.oppousb h3{ font-size:20px; font-weight:bold;}
+.oppousb .money{ color:#008d5a; line-height:26px; text-align:center;}
+.oppovooc{ width:575px; height:270px; background:#fff; border-bottom:5px solid #eaeaea; margin-bottom:20px; padding-left:5px;}
+.oppovooc .msg{ line-height:26px; color:#888888; margin-top:110px; text-align:center;}
+.oppovooc h3{ font-size:20px; font-weight:bold;}
+.oppovooc .money{ color:#008d5a; line-height:26px; text-align:center;}
+.oppousb_r{width:239px; margin-top:-40px;}
+.oppousb_r h3{width:247px;margin-left:-20px;}
+.oppousb_r h3:hover{color:#00925f;}
+
+
+/*worldofoppo*/
+.worldofoppo{width:100%;height:750px;background:#eaeaea; border-top:3px solid #d9d9d9;}
+.worldofoppo_tit{width:371px; margin:0 auto;}
+.worldofoppo_tit a{width:371px;height:129px; background:url(../img/worldofoppo.png) no-repeat; display:inline-block;text-indent:-999em;}
+.worldofoppo_info{width:800px;}
+.worldofoppo_info li{margin-right:20px; margin-bottom:20px;}
+.item1{width:380px;height:270px; background:url(../img/item1.png) no-repeat; display:inline-block;}
+.item2{width:380px;height:270px; background:url(../img/item2.png) no-repeat; display:inline-block;}
+.item3{width:380px;height:270px; background:url(../img/item3.png) no-repeat; display:inline-block;}
+.item4{width:380px;height:270px; background:url(../img/item4.png) no-repeat; display:inline-block;}
+.nw{width:380px; background:#fff; height:560px;}
+.news_tit{height:48px; width:190px;color:#a7a7a7; font-size:18px; background:#fff;border-top:2px solid #00925f; text-align:center; line-height:50px;}
+.weibo_tit{height:50px; width:190px;color:#a7a7a7; font-size:18px;text-align:center; line-height:50px; background:#dadada;}
+.news_tit:hover{color:#00925f;}
+.weibo_tit:hover{height:48px; background:#fff;border-top:2px solid #00925f; color:#00925f;}
+.news_list{width:320px;margin:45px auto;}
+.news_list li{width:320px;height:90px;background:#f6f6f6; margin-bottom:15px;}
+.news_list a{width:190px;font-size:12px; color:#838383; line-height:18px; display:inline-block;margin-left:15px;margin-top:16px;}
+.news_list a:hover{color:#00925f;}
+
+/*contactus*/
+.contactus{width:100%; height:366px; background:#fff;}
+.contactus_t{height:125px;border-bottom:1px solid #eaeaea;}
+.service{width:1180px;height:119px;background:url(../img/icons.png) no-repeat -244px -540px;}
+.dl1{width:188px;margin-top:30px;}
+.dl1 dt{font-size:14px; font-weight:bold; color:#373737; margin-bottom:14px;}
+.dl1 dd a{font-size:12px; color:#838383; line-height:28px;}
+.dl1 dd a:hover{color:#00925f;}
+.dl1 dd i{width:3px;height:3px; background:url(../img/icons.png) no-repeat -330px -1017px; display:inline-block; margin-right:6px;position:relative; bottom:3px;}
+.dl1 dd .sinaus{width:21px;height:17px; background:url(../img/icons.png) no-repeat 0 -881px; display:inline-block;}
+.dl1 dd .qqus{width:18px;height:20px; background:url(../img/icons.png) no-repeat 0 -909px; display:inline-block;margin-left:0;}
+.dl2 dd .renrenus{width:20px;height:18px; background:url(../img/icons.png) no-repeat 0 -939px; display:inline-block;}
+.dl2 dd .qzoneus{width:20px;height:18px; background:url(../img/icons.png) no-repeat 0 -854px; display:inline-block;}
+.dl2 i{top:3px;}
+.phoneus{width:229px;margin-top:30px;}
+.phoneus_tit{font-size:14px; font-weight:bold; color:#373737;margin-bottom:14px;}
+.phoneus_info{width:229px;height:125px;background:url(../img/contactus.png) no-repeat;}
+
+/*copyright*/
+.copyright{width:100%;height:75px; background:url(../img/footerbg.png) repeat-x;}
+.logob{width:102px;height:16px;background:url(../img/icons.png) no-repeat -851px -514px; margin-top:33px;}
+.copyright_con p{height:42px;font-size:12px;color:#828282;padding-top:33px;padding-left:35px;}
+.copyright_con li{margin-left:40px;margin-top:33px;}
+.copyright_con a{color:#e2e2e2;}
+.copyright_con a:hover{color:#00925f;}

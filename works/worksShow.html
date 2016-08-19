@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body,html{height:100%;overflow: hidden;}
+		body{background: #333;}
+		ul{
+			width:300px;
+			height:300px;
+			list-style:none;
+			margin:150px auto;
+			
+			/*transform:perspective(800px) translate(0px) rotateY(0deg) ;*/
+		}
+		li{
+			width:300px;
+			height:300px;
+			background: #399; 
+			border:1px solid #ccc;
+			font-size: 50px; 
+			color:#fff;
+			font-family:微软雅黑 ;
+			line-height: 300px;
+			text-align: center;
+			text-shadow:0 0 5px #eee;
+			position:absolute;
+			opacity: 0;
+			transition:.4s all ease;
+			-webkit-box-reflect:below 20px -webkit-linear-gradient(rgba(255,255,255,0) 40%,rgba(255,255,255,0.4));
+		}
+		.cur{
+			opacity:1;
+			z-index:5;
+		}
+		.l1{
+			z-index:2;
+			opacity:0.8;
+			transform:perspective(800px) translate(-200px) rotateY(60deg) ;
+		}
+		.r1{
+			z-index:2;
+			opacity:0.8;
+			transform:perspective(800px) translate(200px) rotateY(-60deg) ;
+		}
+		.l2{
+			z-index:1;
+			opacity:0;
+			transform:perspective(800px) translate(-280px) rotateY(60deg);
+		}
+		.r2{
+			z-index:1;
+			opacity:0;
+			transform:perspective(800px) translate(280px) rotateY(-60deg);
+		}
+		input{width:60px;height:40px; border:1px solid #333; background: #eee; text-align: center; font-size:26px;color:#333; font-weight:bolder;position:relative; left:620px;top:100px; cursor: pointer;}
+	</style>
+	<script>
+		window.onload=function(){
+			var oPre=document.getElementById('prev');
+			var oNext=document.getElementById('next');
+			var aLi=document.querySelectorAll('ul li');
+			var bClick=false;
+			var aClass=[];
+			for(var i=0;i<aLi.length;i++){
+				aClass[i]=aLi[i].className;
+			}
+			oNext.onclick=function(){
+				if(bClick==true)return;
+				bClick=true;
+				aClass.unshift(aClass.pop());
+				tab();
+			};
+			oPre.onclick=function(){
+				if(bClick==true)return;
+				bClick=true;
+				aClass.push(aClass.shift());
+				tab();
+			};
+			function tab(){
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].className=aClass[i];
+				}
+				var oCur=document.querySelector('.cur');
+				function tEnd(){
+					bClick=false;
+					oCur.removeEventListener('transitionend',tEnd, false);
+				}
+				oCur.addEventListener('transitionend',tEnd,false);
+			}
+		};
+	</script>
+</head>
+<body>
+	<input type="button" id="prev" value="←">
+	<input type="button" id="next" value="→">
+	<ul>
+		<li class="l2">0</li>
+		<li class="l1">1</li>
+		<li class="cur">2</li>
+		<li class="r1">3</li>
+		<li class="r2">4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+	</ul>
+</body>	
+</html>

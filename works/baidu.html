@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+*{margin:0;padding:0;}
+h1{width:270px;margin:50px auto 0;}
+h1 a{width:100%;height:129px; display:inline-block; }
+div{width:642px; margin:20px auto; position:relative;}
+#t1{width:540px;height:36px; border:1px solid #ccc; outline:none;float:left;}
+#btn{width:100px; height:38px; background:blue; border:none; outline:none; color:#fff; font-size:14px;line-height:36px; text-align:center; float:left; cursor:pointer;}
+#list{width:540px;border:1px solid #ccc; border-top:none;list-style:none;position:absolute; top:37px; left:0; display:none;}
+#list li{width:100%;height:30px; line-height:30px;}
+.active{background:#eee;}
+</style>
+<script src="jsonp.js"></script>
+<script>
+window.onload=function(){
+	var oT=document.getElementById('t1');
+	var oList=document.getElementById('list');
+	var iNow=-1;
+	var searchValue='';	
+	document.onclick=function(){
+		oList.style.display='none';
+	};
+	oT.onkeyup=function(ev){
+		var oEvent=ev || event;
+		if(oEvent.keyCode==40 ||oEvent.keyCode==38){
+			return;	
+		}
+		if(oEvent.keyCode==13){
+			window.open('https://www.baidu.com/s?wd='+oT.value,'_self');
+			oT.value='';
+		}
+		oList.style.display='block';
+		jsonp({
+			url:'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?',
+			data:{
+				wd:oT.value	
+			},
+			cbName:'cb',
+			fnSucc:function(json){
+				oList.innerHTML='';
+				var arr=json.s;
+				for(var i=0;i<arr.length;i++){
+					var oLi=document.createElement('li');
+					oLi.innerHTML=arr[i];
+					oList.appendChild(oLi);	
+				}
+				for(var i=0;i<aLi.length;i++){
+					(function(index){
+						aLi[i].index=i;
+						aLi[i].onmouseover=function(){
+							for(var i=0;i<aLi.length;i++){
+								aLi[i].className='';		
+							}
+							this.className='active';	
+						};
+						aLi[i].onmouseout=function(){
+							for(var i=0;i<aLi.length;i++){
+								aLi[i].className='';		
+							}	
+						};	
+						aLi[i].onclick=function(){
+							oT.value=aLi[index].innerHTML;
+							window.open('https://www.baidu.com/s?wd='+oT.value,'_self');
+							oT.value='';
+						};
+					})(i);	
+				}	
+			}
+		});
+		searchValue=oT.value;	
+	};
+	var aLi=oList.children;
+	oT.onkeydown=function(ev){
+		var oEvent=ev || event;
+		if(oEvent.keyCode==40){
+			iNow++;
+			if(iNow==aLi.length){
+				iNow=-1;
+			}
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].className='';		
+			}
+			if(iNow==-1){
+				oT.value=searchValue;	
+			}
+			else{
+				aLi[iNow].className='active';
+				oT.value=aLi[iNow].innerHTML;	
+			}
+		}
+		if(oEvent.keyCode==38){
+			iNow--;
+			if(iNow==-2){
+				iNow=aLi.length-1;
+			}
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].className='';		
+			}
+			if(iNow==-1){
+				oT.value=searchValue;	
+			}
+			else{
+				aLi[iNow].className='active';
+				oT.value=aLi[iNow].innerHTML;	
+			}
+			if(oEvent.keyCode==13){
+				oT.value=aLi[iNow].innerHTML;	
+			}
+			return false;
+		}
+	};
+	var oBtn=document.getElementById('btn');
+	oBtn.onclick=function(){
+		window.open('https://www.baidu.com/s?wd='+oT.value,'_self');
+		oT.value='';	
+	};
+};
+</script>
+<title>无标题文档</title>
+</head>
+
+<body>
+	<h1><a href="http://www.baidu.com"><img src="apple/baiduLogo.png" width="270" height="129" /></a></h1>
+	<div>
+        <input type="text" id="t1">
+        <input type="button" id="btn" value="百度一下">
+        <ul id="list"></ul>
+	</div>
+</body>
+</html>

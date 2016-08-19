@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>照片墙示例</title>
+<style>
+* { margin:0; padding:0; font-family:'Microsoft Yahei';}
+ul { width:510px; height:510px; border:3px solid #507334; margin:50px auto; }
+li { position:relative; float:left; list-style:none; width:150px; height:150px; margin:10px; }
+span { position:absolute; top:0; left:0; width:100%; height:100%; line-height:150px; text-align:center; font-size:50px; font-weight:bold; color:#eee;  }
+.active { width:140px; height:140px; border:5px dashed #eee; }
+input { position:absolute; left:100px; top:100px; width:100px; height:40px;border:none; background:#507334; color:#eee;font-size:16px;outline:none; cursor:pointer; }
+</style>
+<script src="move3.js"></script>
+<script>
+window.onload=function (){
+	var aLi=document.getElementsByTagName('li');
+	var zIndex=1;
+	for (var i=0; i<aLi.length; i++)
+	{
+		var oSpan=document.createElement('span');
+		oSpan.innerHTML=i;
+		aLi[i].appendChild(oSpan);
+	}
+	var aPos=[];
+	for(var i=0;i<aLi.length;i++){
+		aPos.push({
+			left:aLi[i].offsetLeft,
+			top:aLi[i].offsetTop	
+		});	
+	}
+	for(var i=0;i<aLi.length;i++){
+		aLi[i].style.position='absolute';
+		aLi[i].style.left=aPos[i].left+'px';
+		aLi[i].style.top=aPos[i].top+'px';
+		aLi[i].style.margin=0;
+	}
+	for(var i=0;i<aLi.length;i++){
+		aLi[i].index=i;
+		drag(aLi[i]);	
+	}
+	function drag(obj){
+		obj.onmousedown=function(ev){
+			var oNear=null;
+			obj.style.zIndex=zIndex++;
+			var oEvent=ev || event;
+			var disX=oEvent.clientX-obj.offsetLeft;
+			var disY=oEvent.clientY-obj.offsetTop;
+			document.onmousemove=function(ev){
+				var oEvent=ev || event;
+				var left=oEvent.clientX-disX;
+				var top=oEvent.clientY-disY;
+				obj.style.left=left+'px';
+				obj.style.top=top+'px';	
+				oNear=findNear(obj);
+				if(oNear){
+					for(var i=0;i<aLi.length;i++){
+						aLi[i].className='';	
+					}
+					oNear.className='active';	
+				} 
+				else{
+					for(var i=0;i<aLi.length;i++){
+						aLi[i].className='';	
+					}	
+				}
+			};	
+			document.onmouseup=function(){
+				document.onmousemove=null;
+				document.onmouseup=null;
+				obj.releaseCapture && obj.releaseCapture();
+				if(oNear){
+					move(obj,aPos[oNear.index],{duration:300});
+					move(oNear,aPos[obj.index],{duration:300});
+					var tmp=obj.index;
+					obj.index=oNear.index;
+					oNear.index=tmp;
+					oNear.className='';	
+				}
+				else{
+					move(obj,aPos[obj.index]);
+				}
+			};
+			return false;
+			obj.setCapture && obj.setCapture();
+		};	
+	}
+	function findNear(obj){
+		var nMin=999999;
+		var nMinIndex=-1;
+		for(var i=0;i<aLi.length;i++){
+			if(obj==aLi[i]){
+				continue;	
+			}
+			if(collTest(obj,aLi[i])){
+				var dis=getDis(obj,aLi[i]);
+				if(nMin>dis){
+					nMin=dis;
+					nMinIndex=i;	
+				}	
+			}
+		}
+		if(nMinIndex==-1){
+			return null;	
+		}
+		else{
+			return aLi[nMinIndex];	
+		}
+	}
+	//最短路径
+	function getDis(obj1,obj2){
+		var a=obj1.offsetLeft+obj1.offsetWidth/2-(obj2.offsetLeft+obj2.offsetWidth/2);
+		var b=obj1.offsetTop+obj1.offsetHeight/2-(obj2.offsetTop+obj2.offsetHeight/2);	
+		return Math.sqrt(a*a+b*b);
+	}
+	//碰撞检测
+	function collTest(obj1,obj2){
+		var l1=obj1.offsetLeft;
+		var r1=l1+obj1.offsetWidth;
+		var t1=obj1.offsetTop;
+		var b1=t1+obj1.offsetHeight;
+		var l2=obj2.offsetLeft;
+		var r2=l2+obj2.offsetWidth;
+		var t2=obj2.offsetTop;
+		var b2=t2+obj2.offsetHeight;
+		if(l2>r1 || t2>b1 || l1>r2 || t1>b2 ){
+			return false;	
+		}	
+		else{
+			return true;	
+		}
+	}
+	var oBtn=document.getElementById('btn');
+	oBtn.onclick=function(){
+		aPos.sort(function(){
+			return Math.random()-0.5;	
+		});
+		for(var i=0;i<aLi.length;i++){
+			move(aLi[i],aPos[i]);	
+		}
+	};
+};
+</script>
+</head>
+
+<body>
+	<input type="button" value="随机换" id="btn">
+	<ul>
+		<li style="background:#84be55"></li>
+		<li style="background:#507334"></li>
+		<li style="background:#bfb356"></li>
+		
+		<li style="background:#736b34"></li>
+		<li style="background:#404040"></li>
+		<li style="background:#84be55"></li>
+		
+		<li style="background:#bfbfbf"></li>
+		<li style="background:#bfb356"></li>
+		<li style="background:#507334"></li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+

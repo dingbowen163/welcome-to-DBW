@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+.commomwidth{width:998px; margin:0 auto;}
+.fl{float:left;}
+.fr{float:right;}
+body{background:url(../img/bodyBg.png) repeat-x 0 0 fixed;}
+
+/*header*/
+.header{width:100%; height:34px; background:#fbfbfb; border-bottom:1px solid #d6d6d6;}
+.setMainIndex{width:109px; height:22px; border:1px solid #ccc; color:#666; line-height:22px; text-align:center; font-family:'Microsoft Yahei'; margin-top:5px;}
+.setMainIndex:hover{background:#f5f5f5;}
+.setVersion{margin-left:326px;}
+.setVersion a{width:57px;height:34px;border:1px solid #d6d6d6; border-top:none;margin-left:-1px;}
+.setVersion .thisIndex i{ width:16px; height:16px;background:url(../img/thisIndex.png) no-repeat; margin-left:20px;margin-top:8px;display:inline-block;}
+.setVersion .j-btn.active{height:35px; background:#fff;border-bottom:none;}
+.headerMenu a{font-family:'Microsoft Yahei';color:#666; line-height:34px;}
+.headerMenu span{color:#dbccdb;margin-left:12px; margin-right:12px;line-height:34px;}
+.headerMenu .col-red{color:#f60;}
+
+/*content*/
+/*con-header*/
+.con-header{height:70px;font-family:'Microsoft Yahei';}
+.logo a{width:193px;height:33px;background:url(../img/t0151320b1d0fc50be8.png) no-repeat; float:left;margin-left:31px; margin-top:16px;}
+.weatherBox{margin-left:68px;}
+.setCity{width:36px; text-align:center;margin-top:20px;}
+.setCity p{font-weight:bold;color:#666;margin-bottom:10px;}
+.setCity a{color:#666;}
+.todayWeather{margin-left:35px;margin-top:16px;}
+.sunny{width:36px;height:36px;background:url(../img/sunny.png) no-repeat;margin-right:12px;}
+.weather{margin-bottom:10px;}
+.PM span{background:#f93;color:#fff;}
+.tommoWeather{margin-left:5px;margin-top:16px; }
+.fox{width:56px; height:28px; background:url(../img/fog.png) no-repeat;margin-right:5px;}
+.more{width:13px;height:11px; background:url(../img/more.png) no-repeat;margin:30px 15px 28px 28px;}
+.date{width:120px;height:52px;text-align:center;border-left:1px solid #ddd;border-right:1px solid #ddd;margin-top:9px;}
+.date p{color:#666; line-height:25px;}
+.joke{margin-left:14px;margin-top:13px;}
+.joke p{color:#666;margin-bottom:10px;}
+.joke span{width:14px;height:20px; background:url(../img/email.png) no-repeat;display:inline-block;margin-right:5px;}
+.joke input{width:150px; height:18px; border:1px solid #cdcdcd;font-family:'Microsoft Yahei'; outline:none;}
+
+/*searchBox*/
+.searchCon{ height:108px; border:1px solid #cecece; background:#fcfcfc;}
+.searchCon h2 a{width:76px; height:21px; background:url(../img/searchLogo.png) no-repeat; margin-left:146px;margin-top:47px; display:inline-block;}
+.tringle{width:7px; height:4px; background:url(../img/tringle.png) no-repeat;margin-left:7px; margin-top:55px; }
+.searchBox{margin-left:12px;}
+.searchCat{padding-top:8px; margin-left:4px;margin-bottom:7px;}
+.searchCat a{height:22px; line-height:22px;font-family:'Microsoft Yahei';margin-right:18px;color:#323232; }
+.searchCat a.active{width:40px;height:22px; text-align:center; line-height:22px;background:#3eaf0e; color:#fff; border-radius:2px; float:left;}
+.searchInp{width:504px; height:39px; border:1px solid #9c9c9c;outline:none;}
+.searchBtn{width:98px;height:41px; background:url(../img/searchBtn.png) no-repeat;border:1px solid #6a6a6a;margin-left:5px;}
+.friendLink{margin-top:9px;}
+.friendLink li{margin-right:17px;}
+.friendLink li.setIcon{margin-right:7px;}
+.friendLink .setIcon{width:12px;height:12px;background:url(../img/setIcon.png) no-repeat; display:inline-block;}
+.friendLink .waeIcon{width:16px;height:16px;background:url(../img/weaIcon.png) no-repeat;margin-right:3px;}
+.friendLink span{line-height:16px; color:#333;}
+.adPsg{margin-left:10px;margin-top:52px;}
+.adPsg a{color:#666;font-family:'Microsoft Yahei';}
+
+/*mainCat*/
+.mainCat{height:36px;border:1px solid #c9cbce;font-family:'Microsoft Yahei';margin-top:10px;}
+.mainCat li{width:105px; border-right:1px dotted #c9cbce;}
+.mainCat li:hover{background:#f8f8f8;}
+.mainCat li.active{height:35px;border-top:2px solid #54b82a; background:#fbfbfb;}
+.myindexIcon{width:16px; height:16px; background:url(../img/maincatIcon1.png) no-repeat; display:inline-block;margin-left:12px; margin-top:11px;margin-right:8px;}
+.myindexInfo{font-size:14px; color:#333; line-height:36px;}
+.mainCat .soundArea{width:26px;height:36px;text-align:center;}
+.soundArea span{color:#999;}
+.soundIcon{width:16px; height:16px; background:url(../img/soundIcon.png) no-repeat;margin-top:4px; margin-left:6px;margin-bottom:2px;}
+.mainCat .tringleArea{width:15px;height:36px;border-right:none;}
+.tringleArea .tringle{margin-top:16px; margin-left:4px;}
+
+/*mainCon*/
+/*sideNav*/
+.mainCon{margin-top:10px;}
+.sideNav{width:238px; height:234px; border:1px solid #c9cbce; background:#fcfcfc;font-family:'Microsoft Yahei';margin-bottom:10px;}
+.sideNav-tit{height:30px; border-bottom:1px solid #ededed;}
+.sideNav-tit li{width:45px; line-height:30px; font-size:14px;color:#666; text-align:center;margin-left:28px; cursor:pointer;}
+.sideNav-tit li.active{height:29px;border-bottom:2px solid #54b82a;}
+.sideNav-con{margin-left:9px;margin-top:10px;}
+.sideNav-con li{width:104px;margin-right:10px;margin-bottom:18px;}
+.sideNav-con i{width:16px; height:16px;margin-right:6px;}
+.newsIcon1{ background:url(../img/sidenavIcon1.png) no-repeat;}
+.newsIcon2{ background:url(../img/sidenavIcon2.png) no-repeat;}
+.sideNav-con a{font-size:14px; color:#333;}
+.sideNav-con a:hover{color:#f60;}
+.sideNav-con .changeCol{color:#f60;}
+.sideNav-con span{margin-left:4px; margin-right:4px;}
+
+/*sideBannner*/
+.sideBannner{width:238px; height:117px; border:1px solid #c9cbce; background:#fcfcfc;margin-bottom:10px;}
+.sideBannner p a{font-size:14px; color:#333; line-height:27px;margin-left:10px;}
+.sideBannner p a:hover{color:#f60;}
+
+/*sideGuess*/
+.sideGuess{width:238px; height:1331px; border:1px solid #c9cbce; background:#fcfcfc;}
+.sideGuess-tit{height:30px;font-family:'Microsoft Yahei';}
+.sideGuess-tit h3{color:#3eaf0e; font-weight:bold;line-height:30px;margin-left:5px;}
+.sideGuess-tit a{background:url(../img/changeIcon.png) no-repeat 0 0; padding-left:20px; color:#666;margin-top:9px; margin-right:9px;}
+
+/*sideCon*/
+/*sideConTop*/
+.sideGuess div.active{display:block;}
+.sideConNav{height:24px;}
+.j-box{display:none;}
+.sideConNav li{width:59px;height:24px; border:1px solid #ebebeb;margin-left:-1px; background:#fafafa; text-align:center; line-height:24px;font-family:'Microsoft Yahei';color:#666; cursor:pointer;}
+#first{margin-left:0;width:59px;border-left:none;}
+#last{width:58px;border-right:none;}
+.sideConNav .active{border-top:2px solid #54b82a; border-bottom:none;background:#fcfcfc;}
+.sideBanner{position:relative;margin-left:15px;}
+.sideBanner img{margin-top:11px;}
+.sideBannerOpa{height:20px;width:208px; background:#000; opacity:0.3; filter:alpha(opacity:30);position:absolute; bottom:0; left:0;}
+.sideBannerInfo p{width:208px;color:#fff; position:absolute; bottom:0; left:0;line-height:20px; text-align:center;}
+.topCon{margin-top:8px;margin-bottom:9px;}
+.topCon li{color:#333;line-height:26px; margin-left:15px;}
+.topCon a:hover{color:#f60;}
+.topCon .changeCol{color:#f60;}
+
+/*sideConVideo*/
+.sideConVideo .topCon a{height:15px;background:url(../img/playBtn.png) no-repeat 0 0;padding-left:22px; display:inline-block;}
+.sideConVideo .topCon a：hover{color:#f60;}
+
+/*sideConShop*/
+.sideShopBanner{margin-left:10px; margin-top:10px;}
+.sideShopBanner li{width:108px; height:70px;}
+.sideShopBanner .bb1{border-bottom:1px solid #ededed;}
+.sideShopBanner .br1{border-right:1px solid #ededed;}
+.sideShopBanner img{margin-top:22px;margin-left:6px;}
+.sideShopBannerInfo{width:49px;margin-left:4px;margin-top:3px;}
+.sideShopBannerInfo a{line-height:20px; }
+.sideShopBannerInfo .changeCol{color:#f60;}
+.sideShopBannerInfo a:hover{color:#f60;}
+.shopBannerInfo{margin-left:13px;margin-top:5px; margin-bottom:10px;}
+.shopBannerInfo a,.shopBannerInfo span{color:#333; line-height:26px;}
+.shopBannerInfo .lineIcon{margin-left:4px; margin-right:4px; color:#f1f1f1; font-weight:bold;}
+
+/*sideConGame*/
+.sideConGame{height:245px;}
+.sideGameInfo{margin-top:8px;margin-left:13px;}
+.sideGameInfo a{font-size:14px; color:#333; line-height:25px; margin-right:14px;}
+.sideGameInfo a:hover{color:#f60;}
+
+/*sideConGamble*/
+.GambleTop{padding-left:16px;}
+.sideConGamble .p1 a{line-height:45px;}
+.sideConGamble .p2 a,.sideConGamble .p2 span{line-height:40px;}
+.sideConGamble .lineIcon{margin-left:4px; margin-right:4px; color:#f1f1f1; font-weight:bold;}
+.GambleMiddle{width:214px;height:97px;border-top:1px dashed #ddd;border-bottom:1px solid #ddd;margin-left:12px; padding-top:6px; }
+.GambleMiddle a,.GambleMiddle span{font-size:14px; line-height:30px; color:#333;}
+.GambleMiddle .changeCol{color:#f60;}
+.sideConGamble a:hover{color:#f60;}
+
+/*sideConRecharge*/
+.sideConRecharge{width:182px; margin-left:16px; padding:0 16px;}
+.sideConRecharge a:hover{color:#f60;}
+.sideConRecharge a ,.sideConRecharge span{line-height:35px;}
+.sideConRecharge span{margin-left:4px; margin-right:4px; color:#ba99ba;}
+.RechargeRight a{margin-left:11px; color:#868686;}
+.rechargeInp{width:147px; height:18px; border:1px solid #b8b8b8;}
+.rechargeBtn{margin-left:3px;}
+
+/*mianConRight*/
+.mianConRight{width:748px; margin-left:10px;}
+
+/*mianConCat1*/
+.mianConCat1{height:316px; border:1px solid #c9c9c9; background:#fff;font-family:'Microsoft Yahei';}
+.mianConCat1-tit{height:30px; border-bottom:1px solid #f2f2f2; background:#fcfcfc;}
+.websitTit{line-height:30px; color:#3eaf0e; font-weight:bold; font-size:14px;margin-left:13px;}
+.websitManage{color:#999; margin-right:13px;line-height:30px; font-size:12px;}
+.websiteCon1{width:726px;height:119px; margin-left:8px;border-bottom:1px dotted #ccc;font-size:14px; color:#333;padding:6px 0 0 7px;}
+.websiteCon1 a{line-height:30px; margin-right:37px;}
+.websiteCon2{width:726px;height:119px; margin-left:8px;font-size:14px; color:#333;padding:6px 0 0 7px;}
+.websiteCon2 a{line-height:30px; margin-right:37px;}
+.websiteCon1 a:hover,.websiteCon2 a:hover{color:#3eaf0e;}
+
+
+/*mianConCat2*/
+.websitTit2{line-height:26px;}
+.mianConCat2{height:213px;border:1px solid #c9c9c9; background:#fff;font-family:'Microsoft Yahei';margin-top:10px; }
+.mianConCat2-tit{width:739px;height:26px; border-bottom:1px dotted #e9e9e9;margin-left:5px;}
+.mianConCat2-tit span{margin-right:9px;margin-top:4px;}
+.websiteConList{margin-left:12px; margin-top:7px;}
+.websiteConList a{width:88px;font-size:14px;margin-right:15px; float:left;color:#333;line-height:24px;}
+.websiteConList a:hover{color:#3eaf0e;}
+.websiteConList .websiteTit a{width:28px; margin-right:24px;color:#07519a;}
+.websiteConList .change a{width:37px; color:#919191; font-size:12px;}
+
+/*mianConCat3*/
+.mianConCat3{text-align:center;font-family:'Microsoft Yahei';padding-left:34px;}
+.mianConCat3 a{line-height:32px; margin-right:20px;}
+
+/*mianConCat4*/
+.mianConCat4{height:1086px;border:1px solid #c9c9c9; background:#fff;font-family:'Microsoft Yahei'; }
+.mianConCat4-tit{height:23px; background:#fafafa; border-bottom:1px solid #e4e4e4;border-top:1px solid #e4e4e4;padding-top:7px;margin-top:-1px;}
+.mianConCat4-tit a{padding:0 11px; height:17px; border-right:1px solid #e4e4e4; font-size:14px; color:#07519a;}
+.mianConCat4-tit .br0 a{border-right:none;}
+.mianConCat4-tit .changCol a{color:#f60;}
+
+/*mianConCat5*/
+.mianConCat5{height:33px;border:1px solid #c9c9c9; background:#fff;font-family:'Microsoft Yahei';margin-top:10px;}
+.mianConCat5List{margin-right:-25px; margin-left:12px;}
+.mianConCat5 li{margin-right:25px;}
+.mianConCat5 a,.mianConCat5 span{font-size:14px; line-height:33px;}
+.mianConCat5 .catTit{color:#07519a;}
+.mianConCat5 span{margin-left:12px; margin-right:12px; color:#dcccdc;}
+
+/*subnav*/
+.subnav{height:223px; border:1px solid #c9c9c9; background:#fcfcfc; margin-top:10px;font-family:'Microsoft Yahei';}
+.subnavCon{ height:100%;width:332px; border-right:1px solid #c9c9c9;}
+.subnavCon.br0{border-right:none;}
+.subnavTit{ ;padding-top:16px;}
+.subnavTit .a1{font-weight:bold; color:#3eaf0e; background:url(../img/subnavicon.png) no-repeat 0 0;padding-left:22px; padding-top:3px;margin-left:16px;}
+.subnavTit .a2{color:#919191;margin-right:24px; margin-top:3px;}
+.subnavConList a{width:42px; margin-right:15px;float:left; font-size:14px; color:#333;line-height:30px;}
+.subnavConList a:hover{color:#f60;}
+.subnavConList{margin-left:38px; margin-top:8px;}
+.subnavConList .changeCol{color:#07519a;}
+
+/*relax*/
+.relax{height:302px;border:1px solid #c9c9c9; background:#fff; margin-top:10px;font-family:'Microsoft Yahei';}
+.relaxHead{height:33px; border-bottom:1px solid #f2f2f2;}
+.relaxTit{height:33px;font-size:16px; color:#111; line-height:33px; background:url(../img/relaxicon.png) no-repeat 0 9px;padding-left:20px;margin-left:22px;}
+.relaxMainList {margin-left:40px;}
+.relaxMainList li{width:56px; font-size:14px; color:#333; padding:10px 10px; cursor:pointer; margin-right:20px;}
+.relaxMainList .active{color:#54b82a; border-bottom:2px solid #54b82a; height:12px;}
+.relaxSubList{margin-top:9px;}
+.relaxSubList a{font-size:14px; color:#333;padding:0 15px; border-right:1px solid #f2f2f2; }
+.relaxSubList a:hover{color:#54b82a;}
+.relaxSubList .br0{border-right:none;}
+.relaxCon{margin-left:34px;margin-top:10px;} 
+.relaxCon li{width:165px; height:117px;text-align:center;margin-right:25px;margin-bottom:5px;}
+.relaxCon .relaxConInfo{line-height:30px;}
+.relax .j-box{display:none;}
+.relax .active{display:block;}
+
+
+/*footer*/
+.footer{width:100%; height:40px; background:#919191; border-top:1px solid #7e7e7e;margin-top:25px; text-align:center;}
+.footer ul{width:600px; margin:0 auto;}
+.footer a{color:#c2c2c2; line-height:40px;padding:0 7px; border-right:1px solid #c2c2c2;}
+.footer .br0{border-right:none;}

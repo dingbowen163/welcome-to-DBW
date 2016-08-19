@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="reset.css">
+	<title>guokr</title>
+	<style>
+		html{
+			font-size: 20px;
+			overflow-x:hidden;
+			font-family: 'Microsoft Yahei';
+		}
+		.wrap{
+			width:16rem;
+			margin:0 auto;
+		}
+		header{
+			width:16rem;
+			height:2.35rem;
+			background: #262626;
+			border-bottom: 0.1rem solid #4bccae;
+			box-sizing:border-box;
+			text-align: center;
+			display:-webkit-box;
+		}
+		header menu,header a{
+			width:2.25rem;
+			height:2.25rem;
+			display: block;
+		}
+		header menu{
+			text-indent: -9999em;
+			background: url(images/menu.png) no-repeat center center;
+			background-size:50%; 
+		}
+		header h1{
+			color:#fff;
+			font-size: 1rem;
+			font-weight: normal;
+			line-height: 2.35rem;
+			-webkit-box-flex:1;
+		}
+		header a{
+			text-indent: -9999em;
+			background: url(images/pc.png) no-repeat center center;
+			background-size: 50%;
+		}
+		.userBox{
+			width:16rem;
+			height:2.1rem;
+			overflow: hidden;
+			background: #fafafa;
+			display:-webkit-box;
+		}
+		.userBox li{
+			width:50%;
+			-webkit-box-flex:1;
+			height:2.1rem;
+			line-height: 2.1rem;
+			color:#7d7b86;
+			font-size: 0.725rem;
+			
+		}
+		.userLogin{
+			border-right: 1px solid #eee;
+		}
+		.userLogin i{
+			background: url(images/login.png) no-repeat ;
+			background-size:100%; 
+			width:1.45rem;
+			height: 2.025rem;
+			display: inline-block;
+			float: left;
+			margin-left:1.425rem;
+			margin-right:0.5rem;
+		}
+		.userSignup i{
+			background: url(images/signup.png) no-repeat ;
+			background-size:100%; 
+			width:1.45rem;
+			height: 2.025rem;
+			display: inline-block;
+			float: left;
+			margin-left:1.425rem;
+			margin-right:0.5rem;
+		}
+		.banner{
+			width:16rem;
+			height:7.8rem;
+		}
+		.banner img{
+			width:100%; 
+		}
+		.topNews ul{
+			width:100%;
+			padding:0 0.4rem;
+			box-sizing:border-box;
+			border-bottom: 0.1rem solid #4bccae;
+		}
+		.topNews li{
+			width:15.2rem;
+			height:2rem; 
+			border-bottom:1px solid #ececec;
+		}
+		.topNews li a{
+			font-size: 0.725rem;
+			color:#313131;
+			line-height: 2rem;
+			margin-left:0.325rem;
+		}
+		.hotQA{
+			width:16rem;
+			border-bottom: 0.1rem solid #4bccae;
+		}
+		.hotQA h3{
+			width:100%;
+			height:2.05rem;
+			padding-left: 0.75rem;
+			box-sizing:border-box;
+			line-height: 2.05rem;
+			font-size: 0.725rem;
+			color:#313131;
+			background:#fafafa;
+			border-bottom:2px solid #e8e8e8;
+		}
+		.hotQA h3 i{
+			background: url(images/hotQA.png) no-repeat;
+			background-size:100%; 
+			width:1.45rem;
+			height:1.95rem;
+			display: inline-block;
+			margin-right: 0.75rem;
+			float: right;
+		}
+		.hotQA nav{
+			width:16rem;
+			height:2.1rem;
+			overflow: hidden;
+			border-bottom:2px solid #e8e8e8;
+			box-sizing:border-box;
+		}
+		.hotQA nav li{
+			float: left;
+			width:3.1rem;
+			height:2.05rem;
+			box-sizing:border-box;
+			line-height: 2.1rem;
+			text-align:center;
+			font-size: 0.725rem;
+			color:#313131;
+		}
+		.hotQA nav .active{
+			border-bottom: 0.1rem solid #dc3d5b;
+		}
+		.hotQACon{
+			width:16rem;
+			padding:0 0.4rem;
+			box-sizing:border-box;
+		}
+		.hotQACon .active h4{
+			font-size: 0.725rem;
+			color:#313131;
+			height:2rem;
+			line-height: 2rem;
+		}
+		.hotQACon .active div{
+			overflow: hidden;
+			margin-bottom: 0.8rem;
+		}
+		.hotQACon .active img{
+			width:5.2rem;
+			float: left;
+		}
+		.hotQACon .active .info{
+			float: left;
+			width:8.375rem;
+			height:1.85rem;
+			color:#919191;
+			font-size: 0.725rem;
+			line-height: 1.25rem;
+			margin-left:0.7rem;
+		}
+		
+		.hotQACon li a{
+			font-size: 0.725rem;
+			color:#313131;
+			line-height: 2rem;
+			margin-left:0.325rem;
+			width:15.2rem;
+			height:2rem; 
+			border-bottom:1px solid #ececec;
+			display: inline-block;
+		}
+		.hotQACon .toTop{
+			width:16rem;
+			height:3rem;
+			background: #fafafa;
+			margin-left:-0.325rem;
+			line-height: 3rem;
+			color:#adacb1;
+			font-size: 0.725rem;
+		}
+		.hotQACon .toTop i{
+			width:1.5rem;
+			height:3rem;
+			background: url(images/toTop.png) no-repeat;
+			display: inline-block;
+			float: left;
+			background-size:100%; 
+			margin-left:5.5rem;
+			margin-right: 1rem;
+		}
+		footer{
+			width:16rem;
+			height:3.75rem;
+			background: #262626;
+		}
+		footer li{
+			width:50%;
+			color:#d3d3d3;
+			text-align: center;
+			line-height: 3.75rem;
+			float:left;
+			font-size: 0.725rem;
+		}
+	</style>
+	<script>
+	;(function(win,doc){
+		win.onload=win.onresize=function(){
+			doc.documentElement.style.fontSize=20*doc.documentElement.clientWidth/320+'px';
+		};
+	})(window,document);
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<menu>菜单</menu>
+            <h1>GuoKr.com</h1>
+            <a href="javascript:;">PC</a>
+		</header>
+		<section>
+			<nav>
+				<ul class="userBox">
+					<li class="userLogin"><i></i>用户登录</li>
+					<li class="userSignup"><i></i>用户注册</li>
+				</ul>
+			</nav>
+		</section>
+		<section class="banner">
+			<a href="javascript:;">
+				<img src="images/banner.jpg" />
+			</a>
+		</section>
+		<section class="topNews">
+			<ul>
+				<li><a href="javascript:;">你新年的第一个冷笑话</a></li>
+				<li><a href="javascript:;">家鹅：计算战斗力美食物种</a></li>
+				<li><a href="javascript:;">你以为猫咪只会喵喵叫？人家学啥像啥！</a></li>
+				<li><a href="javascript:;">和什么样的人做朋友，可能决定了你的人生</a></li>
+				<li><a href="javascript:;">把两个人的神经接一起，可共享意识吗？</a></li>
+				<li><a href="javascript:;">考古学都做什么工作？</a></li>
+				<li><a href="javascript:;">2015年度科学丑闻来一打</a></li>
+			</ul>
+		</section>
+		<section class="hotQA">
+			<h3>热门回答<i></i></h3>
+			<nav>
+				<ul>
+					<li class="active">科技</li>
+					<li>生活</li>
+					<li>人文</li>
+					<li>自然</li>
+				</ul>
+			</nav>
+			<ul class="hotQACon">
+				<li class="active">
+					<h4>如果把探测器撞到嘿嘿嘿上会怎样</h4>
+					<div>
+						<img src="images/info.jpg">
+						<span class="info">现在一些机场安检使用的那种全身扫描的X光安检机器，最早就是著名的戴比尔斯公司开发的，目的就是检查在钻...</span>
+					</div>
+				</li>
+				<li><a href="javascript:;">弓箭齐射的力能否震脱士兵的盾牌？</a></li>
+				<li><a href="javascript:;">高尔顿钉板用物理如何解释？</a></li>
+				<li><a href="javascript:;">如果把两个人的神经接在一起，能共享...</a></li>
+				<li><a href="javascript:;">什么问题可以证明一个人是不是活了1...</a></li>
+			</ul>
+		</section>
+		<section class="hotQA">
+			<h3>小组热帖<i></i></h3>
+			<nav>
+				<ul>
+					<li class="active">科技</li>
+					<li>生活</li>
+					<li>人文</li>
+					<li>自然</li>
+				</ul>
+			</nav>
+			<ul class="hotQACon">
+				<li class="active">
+					<h4>如果把探测器撞到嘿嘿嘿上会怎样</h4>
+					<div>
+						<img src="images/info2.jpg">
+						<span class="info">现在一些机场安检使用的那种全身扫描的X光安检机器，最早就是著名的戴比尔斯公司开发的，目的就是检查在钻...</span>
+					</div>
+				</li>
+				<li><a href="javascript:;">弓箭齐射的力能否震脱士兵的盾牌？</a></li>
+				<li><a href="javascript:;">高尔顿钉板用物理如何解释？</a></li>
+				<li><a href="javascript:;">如果把两个人的神经接在一起，能共享...</a></li>
+				<li><a href="javascript:;">什么问题可以证明一个人是不是活了1...</a></li>
+				<li class="toTop"><i></i>回到顶部</li>
+			</ul>
+		</section>
+		<footer>
+			<ul>
+				<li>PC版</li>
+				<li>移动应用</li>
+			</ul>
+		</footer>
+	</div>
+</body>
+</html>

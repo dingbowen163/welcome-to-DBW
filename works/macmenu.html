@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>苹果菜单</title>
+<style>
+* { margin:0; padding:0; }
+.box { margin:50px auto; text-align:center; }
+.box input { width:100px; height:40px; line-height:40px; text-align:center; font-size:28px; }
+#div1 { position:absolute; bottom:0; left:0; width:100%; text-align:center; }
+img { width:64px; height:64px; cursor:pointer; }
+</style>
+<script>
+window.onload=function (){
+	var aImg=document.getElementsByTagName('img');
+	var oDiv=document.getElementById('div1');
+	
+	document.onmousemove=function (ev){
+		var oEvent=ev || event;
+		for (var i=0; i<aImg.length; i++)
+		{
+			var a=oEvent.clientX-(aImg[i].offsetLeft+aImg[i].offsetWidth/2);
+			var b=oEvent.clientY-(aImg[i].offsetTop+oDiv.offsetTop+aImg[i].offsetHeight/2);
+			
+			var c=Math.sqrt(a*a+b*b);
+			// 感应距离
+			var scale=(1-c/500).toFixed(2);
+			
+			(scale<0.5) && (scale=0.5);
+			
+			aImg[i].style.width=scale*128+'px';
+			aImg[i].style.height=scale*128+'px';
+		}
+	};
+};
+</script>
+</head>
+
+  <body>
+	<div id="div1">
+		<img src="apple/1.png" />
+		<img src="apple/2.png" />
+		<img src="apple/3.png" />
+		<img src="apple/4.png" />
+		<img src="apple/5.png" />
+        <img src="apple/6.png" />
+		<img src="apple/7.png" />
+		<img src="apple/8.png" />
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
