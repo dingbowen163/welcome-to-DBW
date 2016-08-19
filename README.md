@@ -1,3 +1,3 @@
 # welcome-to-DBW
-DBW's website
-I fixeed few bugs.
+
+I fixed few bugs.  I will make it better.
